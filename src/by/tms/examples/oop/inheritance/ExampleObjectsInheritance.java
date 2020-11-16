@@ -11,15 +11,19 @@ public class ExampleObjectsInheritance {
         dog.displayInfo();
         dog.bark();
 
-        Animal animalDog = dog; // присвоили ссылку на объект
-        Animal animalCat = cat; // присвоили ссылку на объект
-        Animal animal = Animal.newAnimal(100, "ЖЫВОТНАЕ");
+        // присвоили ссылку на объект, upcasting
+        Animal animalDog = dog;
+        Animal animalCat = cat;
 
-        printInfo(cat);
-        printInfo(dog);
+        printInfo(animalCat);
+        printInfo(animalDog);
+
+        Animal animal = Animal.newAnimal(100, "ЖЫВОТНАЕ");
         printInfo(animal);
+
         GrumpyCat grumpyCat = new GrumpyCat();
         printInfo(grumpyCat);
+
         ChattyDog chattyDog = new ChattyDog();
         printInfo(chattyDog);
         chattyDog.bark(5L); // overloading
