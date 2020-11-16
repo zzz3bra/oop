@@ -29,7 +29,7 @@ public abstract class Animal {
     protected abstract void speak();
 
     /**
-     * Factory method which returns an instance of Animal with predefined values for a typical cat.
+     * Factory method which returns an instance of Animal.
      */
     public static Animal newAnimal(int weightInGrams, String name) {
         //валидация
@@ -41,7 +41,7 @@ public abstract class Animal {
             throw new RuntimeException("Труднопроизносимое имя");
         }
 
-        Animal animal = new Animal() {
+        Animal animal = new Animal() { // анонимный класс
             @Override
             public void speak() {
                 System.out.println("Таинственное молчание");
