@@ -18,7 +18,8 @@ public class ExampleObjectsInheritance {
         printInfo(animalCat);
         printInfo(animalDog);
 
-        Animal animal = Animal.newAnimal(100, "ЖЫВОТНАЕ");
+        String name = "ЖЫВОТНАЕ";
+        Animal animal = Animal.newAnimal(100, name);
         printInfo(animal);
 
         GrumpyCat grumpyCat = new GrumpyCat();
