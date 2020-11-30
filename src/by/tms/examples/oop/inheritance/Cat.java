@@ -1,7 +1,12 @@
 package by.tms.examples.oop.inheritance;
 
-public class Cat extends Animal {
+import java.awt.*;
+import java.io.Serializable;
+
+public class Cat extends Animal implements Serializable {
+    private static final long serialVersionUID = 1L;
     private int age;
+    private Color color = Color.GREEN;
 
     public Cat() {
         super(1_000, "Снежок");
@@ -25,6 +30,6 @@ public class Cat extends Animal {
     }
 
     public void displayInfoForCat() {
-        System.out.printf("Имя: %s \t Возраст: %s \t Вес, кг: %.3f \n", getName(), getAge(), getWeightInGrams() / 1000.0);
+        System.out.printf("Имя: %s \t Возраст: %s \t Вес, кг: %.3f, цвет : %s \n", getName(), getAge(), getWeightInGrams() / 1000.0, color);
     }
 }

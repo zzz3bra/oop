@@ -5,7 +5,7 @@ public abstract class Animal {
     private int weightInGrams = 1_000;
     private String name;
 
-    private Animal() {
+    protected Animal() {
     }
 
     protected Animal(int weightInGrams, String name) {
