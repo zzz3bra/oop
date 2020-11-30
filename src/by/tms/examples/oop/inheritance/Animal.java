@@ -1,6 +1,8 @@
 package by.tms.examples.oop.inheritance;
 
-public abstract class Animal {
+import java.io.Serializable;
+
+public abstract class Animal implements Serializable {
 
     private int weightInGrams = 1_000;
     private String name;
