@@ -1,8 +1,16 @@
 package by.tms.examples.oop.inheritance;
 
-public class Dog extends Animal {
+public class Dog extends Animal implements Comparable<Dog> {
     public Dog() {
         super(2_000, "Уголёк");
+    }
+
+    public Dog(String name) {
+        super(2_000, name);
+    }
+
+    public Dog(int weightInGrams, String name) {
+        super(weightInGrams, name);
     }
 
     @Override
@@ -18,4 +26,13 @@ public class Dog extends Animal {
         //do nothing
     }
 
+    @Override
+    public String toString() {
+        return getName() + ":" + getWeightInGrams();
+    }
+
+    @Override
+    public int compareTo(Dog o) {
+        return getName().compareTo(o.getName());
+    }
 }
